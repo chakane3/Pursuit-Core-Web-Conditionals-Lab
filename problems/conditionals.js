@@ -145,7 +145,11 @@ function calculateLetterGrade(grade) {
  * @returns {string} - the number and animal (in either single or plural form)
  */
 function animalCounts(animal, numberOfAnimals) {
-  
+  if(numberOfAnimals >= 2) {
+    return numberOfAnimals + " " + animal + "s"
+  } else {
+    return numberOfAnimals + " " +animal
+  }
 }
 
 
@@ -154,7 +158,14 @@ function animalCounts(animal, numberOfAnimals) {
  * @param {number} a - The number.
  * @returns {string} - "Even or Odd"
  */
-function evenOrOdd() {}
+function evenOrOdd(a) {
+  if(a % 2 === 0) {
+    return "Even"
+  } else {
+    return "Odd"
+  }
+
+}
 
 /**
  * Takes in a number and returns whether that number is even or odd
@@ -162,7 +173,9 @@ function evenOrOdd() {}
  * @param {number} a - The number.
  * @returns {string} - "Even or Odd"
  */
-function evenOrOddWithTernary() {}
+function evenOrOddWithTernary(a) {
+  return (a % 2 === 0 ? "Even" : "Odd")
+}
 
 /**
  * Takes in two numbers and returns the larger number
@@ -172,7 +185,9 @@ function evenOrOddWithTernary() {}
  * @param {number} b - The second number.
  * @returns {number} - The larger number.
  */
-function findLargerTernary() {}
+function findLargerTernary(a, b) {
+  return (a > b ? a : b)
+}
 
 
 
